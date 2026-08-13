@@ -27,12 +27,13 @@ Encerramento:O usuário adota o pet e o cadastro do pet é alterado para adotado
 
 ## Conceitos do domínio
 | Conceito | Identidade | Estado relevante | Comportamento próprio |
+| :-- | :-- | :-- | :-- |
 | Usuário  | idUsuario ou cpf | tipoPerfil (ADOTANTE, DOADOR, AMBOS), ativo (Boolean), bloqueado (Boolean)| cadastrarAnimal(), solicitarAdocao(), atualizarPerfil() |
 | Animal   | idAnimal | status (PARA_ADOCAO, EM_ADOCAO, ADOTADO) | disponibilizarParaAdocao(), iniciarProcessoAdocao(), concluirAdocao(), retirarDeAdocao()|
 
 ## Regras e invariantes
 | ID      | Regra | Objetos envolvidos | Sucesso | Falha |
-
+| :-- | :-- | :-- | :-- | :-- |
 | REG-001 | Disponibilidade para Intenção de Adoção: Um animal só pode receber novas solicitações de adoção se o seu status atual for PARA_ADOCAO. | Animal, Usuario | Processo de adoção é iniciado e o status do animal muda para EM_ADOCAO. | Lança AnimalIndisponivelException (Ação bloqueada se o pet estiver EM_ADOCAO ou ADOTADO). |
 
 | REG-002 | Autorização de Cadastro: Apenas usuários com conta ativa e perfil configurado (DOADOR ou AMBOS) podem cadastrar um animal.| Usuario, Animal | O animal é cadastrado com sucesso com o status PARA_ADOCAO. | Lança UsuarioInativoOuNaoAutorizadoException. |
