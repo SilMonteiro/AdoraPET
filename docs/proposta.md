@@ -67,7 +67,7 @@ Detalhes e Adoção: Visualização completa do pet escolhido e botão para pree
     Status no perfil: Adotante, Protetor(tem animais para adoção),ONG(tem animais para adoção)
     Adicionais para perfil: Tipo de moradia(casa, apto, casa com quintal)
     Parte dedicada a animais com deficiência ou condições especiais. 
-    Animais adotados no mês
+    Página com animais adotados no mês
     Classificação do perfil: pessoas podem classificar outros usuários caso saibam que se trata de um protetor ou uma pessoa que maltrata animais para evitar possíveis criminosos.
 
     
